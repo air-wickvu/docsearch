@@ -39,7 +39,7 @@ class Handler implements URLHandler {
     //edit this method
     public String handleRequest(URI url) throws IOException {
         if(url.getPath().equals("/")){
-            return String.format("There are %d files to search.", ...); 
+            return String.format("There are %d files to search.", FileHelpers.getFiles(Path.get(directory)) ); //How do I return the number of files from getFiles?
         }      
       //return "Don't know how to handle that path!";
     }
